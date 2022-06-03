@@ -415,7 +415,7 @@ export default function Home() {
       <div className="container-fluid footer">
         <div className="row">
           <div className="col-md-12 text-center pt-5 pb-3">
-            <p>Copyright © 2022 Spaced-Headz</p>
+            <p>Copyright © 2022 Spaced-Headz </p>
           </div>
         </div>
       </div>
