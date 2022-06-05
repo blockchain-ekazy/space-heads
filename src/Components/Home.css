@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'SuperMario256';
-  src: url('../Fonts/SuperMario256.ttf');
+  font-family: "SuperMario256";
+  src: url("../Fonts/SuperMario256.ttf");
 }
 
 h1,
@@ -8,257 +8,241 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'SuperMario256';
+  font-family: "SuperMario256";
 }
 
 @font-face {
-  font-family: 'ARLRDBD';
-  src: url('../Fonts/ARLRDBD.ttf');
+  font-family: "ARLRDBD";
+  src: url("../Fonts/ARLRDBD.ttf");
   font-weight: bold;
- 
 }
-  .AAA{
-      background-image: url('../Imgs/Vector.png');
-      /* height: 130vh; */
-      background-position: center;
-      background-color: white;
-      background-size: cover;
-      background-repeat: no-repeat;
-      padding-bottom: 2px;
-     
-     
-  }
-  .carti{
-    padding-top: 50px;
-  }
-  .sev{
-      font-size: 100px;
-      font-weight: 500 ;
-      color: #67e191;
-      
-  }
-  .sev1{
-     padding-top: 20px;
-  }
-  .alie{
-      max-width: 100%;
-      width: 550px !important;
-      margin-top: -290px;
-      margin-left: 80px;
-   
-  }
-  .tbd{
-    background: white;
-    color: #661349;
-    font-size: 30px;
-    /* font-weight: 900 !important; */
-    cursor: pointer;
+.AAA {
+  background-image: url("../Imgs/Vector.png");
+  /* height: 130vh; */
+  background-position: center;
+  background-color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+}
+.carti {
+  padding-top: 50px;
+}
+.sev {
+  font-size: 100px;
+  font-weight: 500;
+  color: #67e191;
+}
+.sev1 {
+  padding-top: 20px;
+}
+.alie {
+  max-width: 100%;
+  width: 550px !important;
+  margin-top: -290px;
+  margin-left: 80px;
+}
+.tbd {
+  background: white;
+  color: #661349;
+  font-size: 30px;
+  /* font-weight: 900 !important; */
+  cursor: pointer;
 
-    letter-spacing:2px;
-    font-family: 'ARLRDBD';
-    border: 4px solid;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 100px;
-    padding-right: 85px;
-    border-radius: 85px;
-    border-color: #661349;
+  letter-spacing: 2px;
+  font-family: "ARLRDBD";
+  border: 4px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 100px;
+  padding-right: 85px;
+  border-radius: 85px;
+  border-color: #661349;
+}
+.tbd:hover {
+  color: white;
+  background-color: #661349;
+  border-color: #661349;
+}
 
-  }
-  .tbd:hover{
-      color: white;
-      background-color: #661349;
-      border-color: #661349;
-  }
- 
- 
-  .alie1{
-      width: 200px !important;
-      max-width: 100%;
-      margin-top: -270px;
-      margin-right: 150px !important;
-  }
-.count{
-
-background: transparent;
-color: #661349;
+.alie1 {
+  width: 200px !important;
+  max-width: 100%;
+  margin-top: -270px;
+  margin-right: 150px !important;
+}
+.count {
+  background: transparent;
+  color: #661349;
   font-size: 70px;
-  font-weight: 900 ;
+  font-weight: 900;
 }
-.quantity{
-    color: #661349;
-    font-size: 40px;
-    font-weight: 600;
-    background-color: white;
-    border-width: 4px;
-    border-style: solid;
-    border-radius: 100px;
-    padding-left: 130px;
-    padding-right: 130px;
-  
-    
+.quantity {
+  color: #661349;
+  font-size: 40px;
+  font-weight: 600;
+  background-color: white;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 100px;
+  padding-left: 130px;
+  padding-right: 130px;
 }
 
-.btn.focus, .btn:focus{
-    box-shadow: none;
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
 }
-@media only screen and (max-width: 600px)
-{
-    .sev{
-        font-size: 70px;
-    }
+@media only screen and (max-width: 600px) {
+  .sev {
+    font-size: 70px;
+  }
 }
-@media only screen and (max-width: 600px)
-{
-    .quantity{
-        padding-left: 90px;
-        padding-right: 90px;
-    }
+@media only screen and (max-width: 600px) {
+  .quantity {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
 }
-@media only screen and (max-width: 600px)
-{
-    .topi{
-        padding-left: 0px !important;
-        padding-right: 0px !important;
-    }
+@media only screen and (max-width: 600px) {
+  .topi {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 }
 
-.cart{
+.cart {
   width: 200px;
 }
 
-
-.btc{
+.btc {
   font-size: 35px;
-  color:#67e191;
- 
+  color: #67e191;
 }
-.uty{
+.uty {
   padding-top: 350px;
 }
-.gko{
+.gko {
   width: 40px !important;
   margin-bottom: 20px;
   /* max-width: 100%; */
 }
-.btc{
+.btc {
   max-width: 100%;
   width: 150px;
 }
-.nav-link{
+.nav-link {
   font-size: 25px;
-  font-family: 'ARLRDBD';
+  font-family: "ARLRDBD";
   font-weight: 600;
   color: white !important;
 }
-.ndt{
+.ndt {
   font-size: 25px;
   color: white;
 }
-.mnt{
+.mnt {
   margin-top: -40px !important;
 }
 
-.TopCon{
+.TopCon {
   max-width: 1400px;
 }
-.about{
+.about {
   margin-top: 40px;
 }
-.clo{
+.clo {
   width: 300px;
 }
-.clo1{
+.clo1 {
   width: 200px;
 }
-.txt{
+.txt {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   font-weight: 200;
   color: #661349;
-  line-height: 26px;
+  line-height: 1.1em;
 }
-.gap{
+.gap {
   padding: 30px;
 }
-.round{
+.round {
   border-radius: 30px;
 }
 
 .slick-dots li.slick-active button::before {
   color: #99e0fe;
 }
-.slick-dots li button:focus, .slick-dots li button:hover{
+.slick-dots li button:focus,
+.slick-dots li button:hover {
   color: #99e0fe !important;
 }
-.roadmap{
-  background-image: url('../Imgs/Background-roadmap.png');
+.roadmap {
+  background-image: url("../Imgs/Background-roadmap.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+
   margin-top: 100px;
 }
-.RD{
+.RD {
   width: 900px;
   max-width: 100%;
 }
-.q1{
-  font-size: 40px ;
+.q1 {
+  font-size: 40px;
 }
-.nft{
+.nft {
   font-size: 22px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
-.ht{
+.ht {
   padding-bottom: 170px;
- 
 }
-@media only screen and (max-width: 600px)
-{
-   .clo1{
-     display: none;
-   }
+@media only screen and (max-width: 600px) {
+  .clo1 {
+    display: none;
+  }
 }
-.own{
+.own {
   padding-bottom: 150px;
 }
-.hto{
+.hto {
   margin-top: -100px;
   padding-bottom: 180px;
 }
-.tem{
+.tem {
   margin-top: 60px;
 }
-.mem{
+.mem {
   max-width: 100%;
   width: 250px !important;
   border-radius: 30px;
 }
-.zio{
+.zio {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 600;
   color: #661349;
 }
-.dev{
+.dev {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 26px;
   font-weight: 400;
   color: #661349;
   line-height: 25px;
-
 }
-.bra{
+.bra {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 28px;
   font-weight: 700;
   line-height: 5px;
   color: #661349;
 }
-.faq{
-  background-image: url('../Imgs/Vector.png');
+.faq {
+  background-image: url("../Imgs/Vector.png");
   /* height: 130vh; */
   background-position: center;
   /* background-color: white; */
@@ -266,17 +250,17 @@ color: #661349;
   background-repeat: no-repeat;
   margin-top: 90px;
 }
-.hea{
+.hea {
   font-size: 28px;
   font-weight: 600;
   color: #dd4b6c;
 }
-.cmk{
+.cmk {
   font-size: 22px;
   font-weight: 400;
   color: #661349;
 }
-.shad{
+.shad {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: white;
   padding-top: 35px;
@@ -284,61 +268,51 @@ color: #661349;
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 100px;
- 
 }
-.mpa{
+.mpa {
   padding-bottom: 90px;
 }
-.AAAA{
-  background-image: url('../Imgs/Vector.png');
+.AAAA {
+  background-image: url("../Imgs/Vector.png");
   /* height: 130vh; */
   background-position: center;
   /* background-color: white; */
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
-  
- 
- 
 }
-.fdr{
+.fdr {
   margin-top: 270px;
 }
-.footer{
+.footer {
   background-color: #eeeeee;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
-@media only screen and (max-width: 600px)
-{
-   .txt {
+@media only screen and (max-width: 600px) {
+  .txt {
     font-size: 16px !important;
-   }
+  }
 }
-@media only screen and (max-width: 600px)
-{
-   .vie {
+@media only screen and (max-width: 600px) {
+  .vie {
     padding-top: 20px;
-   }
+  }
 }
-@media only screen and (max-width: 600px)
-{
-   .hea {
+@media only screen and (max-width: 600px) {
+  .hea {
     font-size: 20px;
-   }
+  }
 }
-@media only screen and (max-width: 600px)
-{
-   .cmk {
+@media only screen and (max-width: 600px) {
+  .cmk {
     font-size: 14px;
-   }
+  }
 }
-@media only screen and (max-width: 600px)
-{
-   .fdr {
+@media only screen and (max-width: 600px) {
+  .fdr {
     padding-top: 0px;
-   }
+  }
 }
-  

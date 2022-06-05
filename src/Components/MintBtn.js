@@ -13,8 +13,8 @@ import "./MintBtn.css";
 
 export default function Home() {
   const REACT_APP_CONTRACT_ADDRESS =
-    "0x3D97D97EEAb396F78191048c6Eef4Fa0015290Cf";
-  const SELECTEDNETWORK = "4";
+    "0x5c4ba7b6F1aAcF0C5Ec10a4d421CE1F76FC72739";
+  const SELECTEDNETWORK = "1";
   const SELECTEDNETWORKNAME = "Ethereum";
 
   const [quantity, setQuantity] = useState(1);
@@ -68,7 +68,7 @@ export default function Home() {
         }
       );
       return;
-    }  else if (status == 2) {
+    } else if (status == 2) {
       await toast.promise(
         ct.methods.mint(quantity).send({ from: metamaskAddress, value: p }),
         {
@@ -138,8 +138,6 @@ export default function Home() {
   return (
     <div className="A AA">
       <div className="container-fluid  ">
-       
-
         <div className="row hy  px-2 justify-content-center">
           <div className="col-12 opt">
             <h3 className="text-white py-4">
@@ -152,7 +150,7 @@ export default function Home() {
               </small>
               <br />
               <small>
-                Price: {((price / 10 ** 18) * quantity).toFixed(2)}ETH
+                Price: {((price / 10 ** 18) * quantity).toFixed(2)}ETH + Gas
               </small>
               <br />
               <small>Max per Address: {maxallowed}</small>
@@ -166,7 +164,7 @@ export default function Home() {
               >
                 -
               </button>
-              <span className="  ">
+              <span className=" text-white ">
                 {quantity}
                 <span
                   className="d-block text-white maxbtn p-1"
@@ -189,18 +187,15 @@ export default function Home() {
             {walletConnected ? (
               <button onClick={loadweb3} className="Mint-button">
                 MINT
-               
               </button>
             ) : (
               <button onClick={connectWallet} className="Mint-button">
                 CONNECT
-            
               </button>
             )}
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

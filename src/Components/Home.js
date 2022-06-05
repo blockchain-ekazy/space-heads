@@ -108,7 +108,7 @@ export default function Home() {
                       </li>
                     </ul>
                     <a
-                      href="https://discord.com/invite/tBmkmtQK"
+                      href="https://twitter.com/SpacedHeadzNFTS"
                       target="_blank"
                     >
                       {" "}
@@ -132,12 +132,12 @@ export default function Home() {
             </div>
             <div className="col-md-4"></div>
           </div>
-          <div className="row mnt ">
-            <div className="col-md-4"></div>
-            <div className="col-md-4 text-center ">
+          <div className="row mnt justify-content-center">
+            {/* <div className="col-md-4"></div> */}
+            <div className="col-md-6 text-center ">
               <MintBtn />
             </div>
-            <div className="col-md-4"></div>
+            {/* <div className="col-md-4"></div> */}
           </div>
           <div className="row carti">
             <div className="col-md-4"></div>
@@ -399,7 +399,7 @@ export default function Home() {
             <div className="col-md-4 text-center p-0 ">
               <img className="w-100 fdr" src={Img1} />
               <div className="pt-4">
-                <a href="https://discord.com/invite/tBmkmtQK" target="_blank">
+                <a href="https://twitter.com/SpacedHeadzNFTS" target="_blank">
                   {" "}
                   <i class="px-2 ndt fa-brands fa-twitter"></i>
                 </a>
