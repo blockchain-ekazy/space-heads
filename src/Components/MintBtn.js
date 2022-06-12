@@ -8,13 +8,22 @@ import { MerkleTree } from "merkletreejs";
 import keccak256 from "keccak256";
 import { white } from "./whitelist.js";
 
+import WalletConnectProvider from "@walletconnect/web3-provider";
+
 import "./Home.css";
 import "./MintBtn.css";
 
+const provider = new WalletConnectProvider({
+  rpc: {
+    1: "https://mainnet.infura.io/v3/66de7a909be142388dff60b40e1fed78",
+    4: "https://rinkeby.infura.io/v3/66de7a909be142388dff60b40e1fed78",
+  },
+});
+
 export default function Home() {
   const REACT_APP_CONTRACT_ADDRESS =
-    "0x5c4ba7b6F1aAcF0C5Ec10a4d421CE1F76FC72739";
-  const SELECTEDNETWORK = "1";
+    "0x3D97D97EEAb396F78191048c6Eef4Fa0015290Cf";
+  const SELECTEDNETWORK = "4";
   const SELECTEDNETWORKNAME = "Ethereum";
 
   const [quantity, setQuantity] = useState(1);
@@ -40,8 +49,8 @@ export default function Home() {
     return merkleTree.getHexProof(check);
   }
   const loadweb3 = async () => {
-    if (!initializeWeb3()) return;
-    if (!connectWallet()) return;
+    // if (!initializeWeb3()) return;
+    // if (!connectWallet()) return;
 
     let p = price * quantity;
     if ((await web3.eth.getBalance(metamaskAddress)) < p) {
@@ -81,43 +90,49 @@ export default function Home() {
     }
   };
 
-  async function checkNetwork() {
-    if ((await web3.eth.net.getId()) == SELECTEDNETWORK) return true;
-    toast.error('Enable "' + SELECTEDNETWORKNAME + '" network!');
-    return false;
-  }
+  // setTimeout(() => {
+  //   initializeWeb3();
+  // }, 10);
 
-  setTimeout(() => {
-    initializeWeb3();
-  }, 10);
+  // const initializeWeb3 = async () => {
+  //   if (await detectEthereumProvider()) {
+  //     window.web3 = new Web3(provider);
+  //     web3 = window.web3;
 
-  const initializeWeb3 = async () => {
-    if (await detectEthereumProvider()) {
-      window.web3 = new Web3(window.ethereum);
-      web3 = window.web3;
+  //     if (!checkNetwork()) return false;
 
-      if (!checkNetwork()) return false;
-
-      ct = new web3.eth.Contract(abi, REACT_APP_CONTRACT_ADDRESS);
-      setStatus(await ct.methods.status().call());
-      setPrice(await ct.methods.PRICE().call());
-      setMaxallowed(await ct.methods.MAX_PER_Transtion().call());
-      return true;
-    } else {
-      toast.error(
-        "Non-Ethereum browser detected. Please use a crypto wallet such as MetaMask!"
-      );
-      return false;
-    }
-  };
+  //     ct = new web3.eth.Contract(abi, REACT_APP_CONTRACT_ADDRESS);
+  //     setStatus(await ct.methods.status().call());
+  //     setPrice(await ct.methods.PRICE().call());
+  //     setMaxallowed(await ct.methods.MAX_PER_Transtion().call());
+  //     return true;
+  //   } else {
+  //     toast.error(
+  //       "Non-Ethereum browser detected. Please use a crypto wallet such as MetaMask!"
+  //     );
+  //     return false;
+  //   }
+  // };
 
   const connectWallet = async () => {
     console.log(merkleTree.getRoot().toString("hex"));
-    if (!initializeWeb3()) return false;
-    await window.ethereum.enable();
-    let m = await web3.eth.getAccounts();
+
+    // if (!initializeWeb3()) return false;
+    let m = await provider.enable();
     m = m[0];
     setMetamaskAddress(m);
+
+    const web3 = new Web3(provider);
+
+    console.log(await web3.eth.getChainId());
+
+    if ((await web3.eth.getChainId()) != SELECTEDNETWORK) {
+      toast.error('Enable "' + SELECTEDNETWORKNAME + '" network!');
+      return;
+    }
+
+    const ct = new web3.eth.Contract(abi, REACT_APP_CONTRACT_ADDRESS);
+    let status = await ct.methods.status().call();
 
     if (status == 0) {
       toast.error("Sale not Started!");
